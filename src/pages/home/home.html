@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div id="container" style="display: block;"	></div>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
+  
+  <table style="width:100%">
+    <tr>
+      <th>Day</th>
+      <th>Low</th>
+      <th>High</th>
+      <th>Humidity</th>
+      <th>Chance of Rain</th>
+    </tr>
+    <tr *ngFor="let item of messageList">
+      <td> {{item.Day}}  </td>
+      <td>{{item.low}} </td>
+      <td>{{item.high}} </td>
+      <td>{{item.humidity}} </td>
+      <td>{{item.chanceOfRain}} </td>
+    </tr>
+  </table>
+</ion-content>
